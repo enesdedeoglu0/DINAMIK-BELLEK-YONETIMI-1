@@ -1,0 +1,26 @@
+
+CREATED BY ENES DEDEOĞLU ~~~ 20.05.2022 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int sayi;
+    printf("KAC ELEMANLI DIZI OLUSTURACAKSINIZ :");
+    scanf("%d",&sayi);
+
+    int *matris = (int *) malloc(sizeof(int) * sayi);
+
+    for (int i = 0; i < sayi; ++i) {
+        printf("%2d. ELEMANI GIRINIZ  : ", i+1);
+        scanf("%d",matris + i); 
+    }
+
+    for (int i = 0; i < sayi; ++i) {
+        printf("%d. ELEMANI : %2d\n", i+1, matris[i]);
+    }
+    
+    free(matris);
+
+    return 0;
+}
